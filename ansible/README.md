@@ -1,7 +1,7 @@
 # Run playbook
 ## Command
 ```console
-devnet@devnet:~/Ansible$ ansible-playbook enableNetconf.yml -i inventory -v
+devnet@devnet:~/Ansible$ ansible-playbook enableNetconf.yml -v
 ```
 
 ## Expected output
