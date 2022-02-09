@@ -1,0 +1,19 @@
+---
+
+- name: enable netconf-yang on CSR
+  hosts: csr1
+  connection: network_cli
+  tasks:
+
+    - name: Enable NETCONF service
+      ios_config:
+        lines:
+        - netconf-yang
+        save_when: modified
+
+    - name: Get NETCONF service status
+      ios_command:
+        commands:
+          - show netconf-yang status
+
+...

@@ -1,0 +1,10 @@
+---
+csrs:
+  hosts:
+      csr1:
+          ansible_port: "{{ lookup('env', 'CSR1_SSH_PORT') }}"
+          ansible_host: "{{ lookup('env', 'CSR1_HOST') | ipaddr }}"
+          ansible_ssh_user: "{{ lookup('env', 'CSR1_SSH_USER') }}"
+          ansible_ssh_pass: "{{ lookup('env', 'CSR1_SSH_PASS') }}"
+          ansible_network_os: "{{ lookup('env', 'CSR1_OS') }}"
+...

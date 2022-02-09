@@ -1,0 +1,24 @@
+---
+
+- name: enable netconf-yang on CSR
+  hosts: csr1
+  connection: network_cli
+  tasks:
+
+    - name: Create Directory
+      file:
+        path: ~/Ansible/cfg
+        state: directory
+      run_once: true
+
+    - name: Get running config  
+      ios_command:
+        commands: show run  
+      register: config
+
+    - name: Save output
+      copy:
+        content: "{{config.stdout[0]}}"
+        dest: "~/Ansible/cfg/{{inventory_hostname}}.cfg"
+
+...

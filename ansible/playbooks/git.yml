@@ -1,0 +1,23 @@
+---
+
+- name: Version control of configs
+  hosts: localhost
+
+  tasks:
+
+    - name: print time
+      command: date
+      register: time
+      changed_when: false
+      delegate_to: localhost
+      run_once: yes
+
+    - name: git commands
+      shell: |
+        git add .
+        git commit -m "Device Backup on {{time.stdout}} "
+        git push ansible
+      args:
+        chdir: ~/Ansible/
+      delegate_to: localhost
+      run_once: yes
