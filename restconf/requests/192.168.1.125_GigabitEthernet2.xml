@@ -1,0 +1,10 @@
+
+<interface xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"  xmlns:if="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+  <name>GigabitEthernet2</name>
+  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+  <enabled>false</enabled>
+  <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+  </ipv4>
+  <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+  </ipv6>
+</interface>
