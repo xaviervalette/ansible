@@ -1,0 +1,15 @@
+---
+
+- name: Copy a file from a FTP server to a Cisco IOS-XE device
+  hosts: csr1
+  connection: network_cli
+  tasks:
+
+    - name: Copy a file from a FTP server to a Cisco IOS-XE device
+      ios_command:
+        commands:
+          - command: "copy ftp://{username}:{password}@{IP}/{filepath/filename} flash:{filepath/filename}"
+            prompt: 'Destination filename [{filename}]?'
+            answer: "\r"
+
+...
