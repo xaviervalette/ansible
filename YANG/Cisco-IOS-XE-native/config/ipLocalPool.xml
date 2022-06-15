@@ -1,0 +1,13 @@
+<config>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <ip>
+        <local>
+        <pool>
+            <id>Test</id>
+            <start>1.1.1.1</start>
+            <last>2.2.2.2</last>
+        </pool>
+        </local>
+    </ip>
+    </native>
+</config>
